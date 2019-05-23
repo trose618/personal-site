@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "npm run open",
+    "open": "concurrently \"http-server -a localhost -p 3001\" \"open http://localhost:3001/\""
   },
   "repository": {
     "type": "git",

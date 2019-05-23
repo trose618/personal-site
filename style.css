@@ -4,27 +4,47 @@ body {
     margin: 0;
 }
 
+@media all and (min-width: 801px){
+
 .main-header{
    width: 100%;
    background-color: black;
-   height: 4rem;
+   height: 60px;
    padding: 0, 1.5rem; /* 0 is left and right, 1.5 is top and bottom*/
+   
 }
 
 .main-header__item-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
+    float: right;
+    border-right: none;
+    
 }
+
+ul li {
+    display: inline-block;
+}
+
+.burger {
+    display: none;
+  }
+
+  .paddy {
+    display: none;
+  }
 
 .main-header__name {
     color: white;
+    float: left;
+    padding-left: 15px;
 }
 
 .main-header__item {
     margin: 0 1rem;
     padding: 0;
+    float: right;
 }
 
 .main-header__item a {
@@ -33,7 +53,90 @@ body {
 }
 
 .main-header__nav {
-    height: 100%;
-    display:flex;
+    /* width: 100%; */
+    height: auto;
+    padding-top: 20px;
+    /* display:flex; */
     align-items: center;
+}
+
+.main-header__item a:hover {
+    color: yellow;
+}
+}
+
+/* small screens */
+@media all and (max-width: 600px){
+    .burger {
+        display: inline-block;
+        width: 35px;
+        height: auto;
+        padding: 0 1.5rem;
+      }
+    
+      .paddy {
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: white;
+        margin: 6px 0;
+      }
+
+      .main-header__item {
+          display: none;
+      }
+}
+
+
+
+@media all and (max-width: 800px){
+    .main-header{
+        width: 100%;
+        background-color: black;
+        height: 60px;
+        padding: 0, 1.5rem; /* 0 is left and right, 1.5 is top and bottom*/
+        min-height: 60px;
+     }
+
+     .main-header__item-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        float: right;
+        border-right: none;
+        
+    }
+
+    ul li {
+        display: inline-block;
+    }
+    
+    .main-header__name {
+        color: white;
+        float: left;
+        padding-left: 15px;
+    }
+    
+    .main-header__item {
+        margin: 0 1rem;
+        padding: 0;
+        float: right;
+    }
+    
+    .main-header__item a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .main-header__nav {
+        /* width: 100%; */
+        height: auto;
+        padding-top: 20px;
+        /* display:flex; */
+        align-items: center;
+    }
+    
+    .main-header__item a:hover {
+        color: yellow;
+    }
 }
