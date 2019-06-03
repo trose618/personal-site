@@ -1,7 +1,10 @@
+
+
 body {
     background-color: silver;
     padding: 0;
     margin: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 footer {
@@ -26,10 +29,6 @@ footer {
     left: 300px;
 }
 
-.main-header {
-    
-}
-
 .side-nav {
     display: none;
 }
@@ -50,6 +49,12 @@ footer {
     background-color: white;
     margin: 6px 0;
   }
+
+  .main-header__name {
+    color: white;
+    float: left;
+    padding-left: 15px;
+}
 
   .main-header__item-list {
       height: 100%;
@@ -76,9 +81,15 @@ footer {
       border-color: grey;
       border-width: 1px;
       background-color: black;
-      top: 60px;
-      right: 0;
+      top: 70px;
+      right: -214px; /*;*/
       z-index: 90;
+      transition: all 200ms linear;
+      
+  }
+
+  .menu-holder.active {
+      right: 0px;
   }
 
   .menu-list {
@@ -99,9 +110,14 @@ footer {
     text-decoration: none;
   }
 
+  .main-header {
+    height: auto;
+    background-color: black;
+  }
+
   .main-header__nav {
     /* width: 100%; */
-    height: auto;
+    height: 50px;
     padding-top: 20px;
     /* display:flex; */
     
@@ -117,6 +133,20 @@ ul li {
     top: 60px;
     left: 0px;
 }
+
+.footer-menu-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    
+}
+
+.footer-menu-item {
+    padding: 0 6vw;
+    text-align: center;
+}
+
 
 @media all and (min-width: 801px){
 
@@ -182,9 +212,9 @@ ul li {
     color: yellow;
 }
 
-.menu-holder {
+/* .menu-holder {
     display: none;
-}
+} */
 
 .side-nav{
     position: fixed;
@@ -196,7 +226,6 @@ ul li {
     border-color: grey;
     height: 100%;
     min-width: 300px;
-    font-family: 'Raleway', sans-serif;
 }
 
 .side-nav-list {
@@ -224,12 +253,12 @@ ul li {
 
 }
 
-@media all and (max-width: 800px){
+/* @media all and (max-width: 800px){
     .main-header{
         width: 100%;
         background-color: black;
         height: 60px;
-        padding: 0, 1.5rem; /* 0 is left and right, 1.5 is top and bottom*/
+        padding: 0, 1.5rem;
         min-height: 60px;
      }
 
@@ -306,12 +335,9 @@ ul li {
         text-align: center;
     }
 
-    .main-header__nav {
-        /* width: 100%; */
+    .main-header__nav { 
         height: auto;
-        padding-top: 20px;
-        /* display:flex; */
-        
+        padding-top: 20px; 
     }
 
-}
+} */
