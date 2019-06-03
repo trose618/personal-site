@@ -5,16 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentPage = document.getElementById('current-page');
     let footerList = document.querySelector('.footer-menu-list');
 
+    //load up footer content
     footerList.innerHTML = toggleFooterList("About Me");
 
+
     burger.addEventListener('click', () => {
-        // mobileMenu.style.display = mobileMenu.style.display === "none" ? 'block' : "none";
         document.querySelector('.menu-holder').classList.toggle('active');
     })
 
     mobileMenu.addEventListener('click', (e) => {
 
         e.preventDefault();
+
         //get page name that was clicked
         let page = e.target.innerText;
 
