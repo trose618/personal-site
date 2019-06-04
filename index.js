@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let mainBody = document.querySelector('.main-body');
 
     //load up footer content
-    footerList.innerHTML = toggleFooterList("About Me");
-    mainBody.innerHTML = togglePage('About Me')
+    footerList.innerHTML = toggleFooterList("Resume");
+    mainBody.innerHTML = togglePage('Resume')
 
     burger.addEventListener('click', () => {
         document.querySelector('.menu-holder').classList.toggle('active');
@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li class="footer-menu-item"><a href="#hobbies">Hobbies</a></li>`
         }
         if (page === 'Resume') {
-            return `<li class="footer-menu-item">Bio</li>
-                    <li class="footer-menu-item">Projects</li>
+            return `<li class="footer-menu-item">Projects</li>
                     <li class="footer-menu-item">Skills</li>
-                    <li class="footer-menu-item">Experiences</li>`
+                    <li class="footer-menu-item">Jobs</li>
+                    <li class="footer-menu-item">Education</li>`
         }
         if (page === 'Projects') {
             return `<li class="footer-menu-item">Squash Buddy</li>
@@ -93,6 +93,38 @@ document.addEventListener("DOMContentLoaded", () => {
                         </p>
                     </a>`
 
+        } if (page === "Resume") {
+            return `<a id="bio">
+                        <h1>
+                            Resume
+                        </h1>
+                    </a>
+
+                    <h3>
+                        Projects
+                    </h3>
+
+                    <div class="project-holder">
+                        <ul>
+                            <li><span>Coach Me</span>
+                                <ul>
+                                
+                                </ul>
+                            </li>
+                            <li><span>Welcome Board</span>
+                                <ul>
+                                
+                                </ul>
+                            </li>
+                            <li><span>Squash Buddy</span>
+                                <ul>
+                                
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    `
         } else { return `<h1>${page}</h1>` }
     }
 })

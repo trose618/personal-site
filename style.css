@@ -147,7 +147,7 @@ a div {height: 10px;} /* for moving to top of section*/
     text-align: left;
     font-size: 1.5em;
     padding-top:5px;
-    padding-left: 15%;;
+    padding-left: 15%;
     padding-right: 15%;
 }
 
@@ -156,8 +156,24 @@ a div {height: 10px;} /* for moving to top of section*/
     text-decoration: underline;
 }
 
-ul li {
+header ul li {
     display: inline-block;
+}
+
+ul {
+    padding:0;
+    list-style: none;
+}
+
+.project-holder ul li {
+    padding-bottom: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: left;
+}
+
+.project-holder span {
+    font-size: 1.2em;
 }
 
 .footer-menu-list {
