@@ -4,10 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let mobileMenu = document.querySelector('.menu-holder');
     let currentPage = document.getElementById('current-page');
     let footerList = document.querySelector('.footer-menu-list');
+    let mainBody = document.querySelector('.main-body');
 
     //load up footer content
     footerList.innerHTML = toggleFooterList("About Me");
-
+    mainBody.innerHTML = togglePage('About Me')
 
     burger.addEventListener('click', () => {
         document.querySelector('.menu-holder').classList.toggle('active');
@@ -24,15 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
         footerList.innerHTML = toggleFooterList(page);
 
+        mainBody.innerHTML = togglePage(page);
+
         document.querySelector('.menu-holder').classList.toggle('active');
     })
 
 
     function toggleFooterList(page) {
         if (page === 'About Me') {
-            return `<li class="footer-menu-item">Bio</li>
-                    <li class="footer-menu-item">Skills</li>
-                    <li class="footer-menu-item">Hobbies</li>`
+            return `<li class="footer-menu-item"><a href="#bio">Bio</a></li>
+                    <li class="footer-menu-item"><a href="#skills">Skills</a></li>
+                    <li class="footer-menu-item"><a href="#hobbies">Hobbies</a></li>`
         }
         if (page === 'Resume') {
             return `<li class="footer-menu-item">Bio</li>
@@ -51,5 +54,46 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function togglePage(page) {
+        if (page === "About Me") {
+            return `<a id="bio">
+                        <h1>
+                            Terrance Rose Jr.
+                        </h1>
+                    </a>
+
+                    <img class="about-me my-photo" alt="" src="./pics/personal_site_photo.jpeg">
+
+                    <h3>My Passion</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, quis enim similique sapiente
+                        reprehenderit recusandae eveniet illum unde cum blanditiis assumenda fugiat laudantium dicta animi
+                        distinctio! Excepturi cum recusandae culpa! Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Eum, quis enim similique sapiente
+                        reprehenderit recusandae eveniet illum unde cum blanditiis assumenda fugiat laudantium dicta animi
+                        distinctio! Excepturi cum recusandae <a id="skills"><span>culpa</span></a>!
+                    </p>
+
+                    <br />
+                   
+                    
+                        <h3>Skills</h3>
+                    
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, quis enim similique sapiente
+                            reprehenderit recusandae eveniet illum unde cum blanditiis assumenda fugiat laudantium dicta animi
+                            distinctio! Excepturi cum recusandae culpa!
+                        </p>
+                    
+                    <br />
+                    <a id="hobbies">
+                        <h3>Hobbies</h3>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, quis enim similique sapiente
+                            reprehenderit recusandae eveniet illum unde cum blanditiis assumenda fugiat laudantium dicta animi
+                            distinctio! Excepturi cum recusandae culpa!
+                        </p>
+                    </a>`
+
+        } else { return `<h1>${page}</h1>` }
+    }
 })
 

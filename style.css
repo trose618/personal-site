@@ -20,16 +20,20 @@ footer {
 
 #content-div {
     position: relative;
-    height: 1000px;
+    /* height: 1000px; */
     min-height: 100vh;
 }
 
 .main-body {
     width: 100%;
     position: absolute;
-    top: 60px;
-    left: 300px;
+    margin-top: 70px;
+    /* top: 80px; */
+    text-align: center;
+    margin-bottom: 60px;
 }
+
+a div {height: 10px;} /* for moving to top of section*/
 
 .side-nav {
     display: none;
@@ -124,8 +128,11 @@ footer {
   }
 
   .main-header {
+    position: fixed;
+    width: 100%;
     height: auto;
     background-color: black;
+    z-index: 9000;
   }
 
   .main-header__nav {
@@ -136,15 +143,21 @@ footer {
     
 }
 
-ul li {
-    display: inline-block;
+  .main-body p {
+    text-align: left;
+    font-size: 1.5em;
+    padding-top:5px;
+    padding-left: 15%;;
+    padding-right: 15%;
 }
 
-.main-body {
-    width: 100%;
-    position: absolute;
-    top: 60px;
-    left: 0px;
+.main-body h3 {
+    font-size: 25px;
+    text-decoration: underline;
+}
+
+ul li {
+    display: inline-block;
 }
 
 .footer-menu-list {
@@ -164,6 +177,16 @@ h1 {
     text-align: center;
 }
 
+img {
+    background-color: white;
+    width: 70%;
+    height: 300px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: black;
+}
 
 @media all and (min-width: 801px){
 
