@@ -165,15 +165,15 @@ ul {
     list-style: none;
 }
 
-.project-holder ul li {
+.project-holder ul li , .job-holder ul li, .education-holder ul li{
     padding-bottom: 30px;
     padding-left: 15%;
     padding-right: 15%;
     text-align: left;
 }
 
-.project-holder span {
-    font-size: 1.2em;
+.project-holder span , .tech-skills-holder span, .job-holder span, .education-holder span{
+    font-size: 22px;;
 }
 
 .footer-menu-list {

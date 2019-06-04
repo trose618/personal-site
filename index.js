@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let mainBody = document.querySelector('.main-body');
 
     //load up footer content
+    currentPage.innerText = "Resume"
     footerList.innerHTML = toggleFooterList("Resume");
     mainBody.innerHTML = togglePage('Resume')
 
@@ -38,9 +39,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <li class="footer-menu-item"><a href="#hobbies">Hobbies</a></li>`
         }
         if (page === 'Resume') {
-            return `<li class="footer-menu-item">Projects</li>
-                    <li class="footer-menu-item">Skills</li>
-                    <li class="footer-menu-item">Jobs</li>
+            return `<li class="footer-menu-item"><a href="#projects">Projects</a></li>
+                    <li class="footer-menu-item"><a href="#skills">Skills</a></li>
+                    <li class="footer-menu-item"><a href="#jobs">Jobs</a></li>
                     <li class="footer-menu-item">Education</li>`
         }
         if (page === 'Projects') {
@@ -80,24 +81,24 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, quis enim similique sapiente
                             reprehenderit recusandae eveniet illum unde cum blanditiis assumenda fugiat laudantium dicta animi
-                            distinctio! Excepturi cum recusandae culpa!
+                            distinctio! Excepturi cum recusandae <a id="hobbies">culpa</a>!
                         </p>
                     
                     <br />
-                    <a id="hobbies">
+                    
                         <h3>Hobbies</h3>
                         <p>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, quis enim similique sapiente
                             reprehenderit recusandae eveniet illum unde cum blanditiis assumenda fugiat laudantium dicta animi
                             distinctio! Excepturi cum recusandae culpa!
                         </p>
-                    </a>`
+                    `
 
         } if (page === "Resume") {
-            return `<a id="bio">
-                        <h1>
-                            Resume
-                        </h1>
+            return `<a id="projects">
+                        <div>
+                           . 
+                        </div>
                     </a>
 
                     <h3>
@@ -123,7 +124,57 @@ document.addEventListener("DOMContentLoaded", () => {
                             </li>
                         </ul>
                     </div>
-                    
+
+
+                    <h3>
+                        Technical Skills
+                    </h3>
+
+                    <div class="tech-skills-holder">
+                        <p>
+                            <span>Ruby, Rails, SQL, JavaScript, React, Redux, Java, HTML, CSS, Postgresql, Material UI, Semantic UI, Github, <a id="jobs">Terminal</a></span>
+                        </p>
+                    </div>
+
+                    <br/>
+
+                    <h3>
+                        Employment History
+                    </h3>
+
+                    <div class="job-holder">
+                        <ul>
+                            <li><span>NYSC (Cobble Hill)</span>
+                                <ul>
+                                
+                                </ul>
+                            </li>
+                            <li><span>SteelCitySquash</span>
+                                <ul>
+                                
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <h3>
+                        Eduction
+                    </h3>
+
+                    <div class="education-holder">
+                        <ul>
+                            <li><span>Flatiron School</span>
+                                <ul>
+                                
+                                </ul>
+                            </li>
+                            <li><span>Hobart and William Smith Colleges</span>
+                                <ul>
+                                
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
                     `
         } else { return `<h1>${page}</h1>` }
     }
