@@ -79,7 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                         <h3>Skills</h3>
                     
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, quis enim similique sapiente
+                        <p> 
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum, quis enim similique sapiente
                             reprehenderit recusandae eveniet illum unde cum blanditiis assumenda fugiat laudantium dicta animi
                             distinctio! Excepturi cum recusandae <a id="hobbies">culpa</a>!
                         </p>
@@ -96,9 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         } if (page === "Resume") {
             return `<a id="projects">
-                        <div>
-                           . 
-                        </div>
+                        
                     </a>
 
                     <h3>
